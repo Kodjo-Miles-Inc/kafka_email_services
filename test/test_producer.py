@@ -7,7 +7,7 @@ class TestKafkaNotificationProducer(unittest.TestCase):
     def test_send_notification(self):
         producer = KafkaNotificationProducer(["localhost:9092"], "test_topic")
         try:
-            producer.send_notification({"test": "message"})
+            producer.send_notification({"test": "This is a test message"})
         finally:
             producer.close()
 
